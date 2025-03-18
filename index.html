@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HP Organiser</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2a2a2a;
+            color: #fff;
+        }
+        header {
+            background-color: #1f1f1f;
+            color: #f4b400;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            position: relative;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #f4b400;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 12px;
+            display: block;
+            font-weight: bold;
+        }
+        nav ul li .dropdown {
+            position: absolute;
+            background-color: #252525;
+            padding: 15px;
+            z-index: 1000;
+            border: 1px solid #f4b400;
+            border-radius: 5px;
+            box-shadow: 0px 8px 16px rgba(244, 180, 0, 0.3);
+            width: max-content;
+            max-width: 80vw;
+            overflow-y: auto;
+            max-height: 400px;
+            display: none;
+            grid-template-columns: repeat(2, minmax(180px, 1fr)); max-width: 600px;
+            gap: 10px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+        nav ul li:hover .dropdown {
+            display: grid;
+            opacity: 1;
+            visibility: visible;
+            left: 50%; transform: translateX(-50%);
+            right: auto;
+        }
+        nav ul li .dropdown.right-align {
+            left: auto;
+            right: 0;
+            transform: none;
+          
+            position: absolute;
+            background-color: #252525; 
+            padding: 15px;
+            z-index: 1000;
+            border: 1px solid #f4b400
+            border-radius: 5px;
+            box-shadow: 0px 8px 16px rgba(244, 180, 0, 0.3);
+            width: max-content;
+            max-width: 100vw;
+            overflow-y: auto;
+            max-height: 400px;
+            display: none;
+            grid-template-columns: repeat(3, minmax(180px, 1fr));
+            gap: 10px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+        nav ul li:hover .dropdown {
+            display: grid;
+            opacity: 1;
+            visibility: visible;
+        }
+        nav ul li .dropdown.right-align {
+            left: auto;
+            right: 0;
+            transform: none;
+        }
+        .dropdown a {
+            color: #f4b400;
+            padding: 10px;
+            display: block;
+            box-sizing: border-box;
+            text-decoration: none;
+            white-space: nowrap;
+            text-align: left;
+            background: #333;
+            border-radius: 3px;
+        }
+        .dropdown a:hover {
+            background-color: #444;
+            color: white;
+        }
+        .dropdown a:active, .dropdown a:focus {
+            background-color: #f4b400;
+            color: black;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #2c2c2c;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(244, 180, 0, 0.3);
+            text-align: center;
+        }
+        
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin-bottom: 10px;
+            }
+            nav ul li .dropdown {
+                position: relative;
+                width: 100%;
+                max-width: 90vw;
+                left: auto;
+                right: auto;
+                transform: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin-bottom: 10px;
+            }
+            nav ul li .dropdown {
+                position: relative;
+                width: 100%;
+                max-width: 90vw;
+                left: auto;
+                right: auto;
+                transform: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+       <h1>HP Organiser</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+               <a href="#low-pressure">Low Pressure</a>
+                <div class="dropdown">
+                    <a href="#ball-valves">Ball Valves</a>
+                    <a href="#barrel-pumps">Barrel Pumps</a>
+                    <a href="#camlock-fittings">Camlock Fittings</a>
+                    <a href="#descaling-pumps">Descaling Pumps</a>
+                    <a href="#filters-housings">Filters & Housings</a>
+                    <a href="#hosetails">Hosetails</a>
+                    <a href="#low-pressure-hoses">Low Pressure Hoses</a>
+                    <a href="#marolex-sprayers">Marolex Sprayers</a>
+                </div>
+            </li>
+            <li>
+               <a href="#electrical-equipment">Electrical Equipment</a>
+                <div class="dropdown">
+                    <a href="#anti-vibration">Anti-vibration Mounts</a>
+                    <a href="#capacitors">Capacitors</a>
+                    <a href="#cables-plugs">Cables & Plugs</a>
+                    <a href="#hour-meter-timers">Hour Meter Timers</a>
+                </div>
+            </li>
+            <li>
+                <a href="#hose-adaptors">Hose Adaptors & Connectors</a>
+                <div class="dropdown">
+                    <a href="#adaptors">Adaptors</a>
+                    <a href="#hose-adaptors">Hose Adaptors</a>
+                    <a href="#quick-release">Quick Release Couplings</a>
+                    <a href="#water-mudsuckers">Water & Mudsuckers</a>
+                </div>
+            </li>
+            <li>
+                <a href="#high-pressure">High Pressure</a>
+                <div class="dropdown">
+                    <a href="#high-pressure-pumps">High Pressure Pumps & Spares</a>
+                    <a href="#high-pressure-filters">High Pressure Filters</a>
+                    <a href="#pressure-switches">Pressure Switches & Spares</a>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <a href="#economy-gun-lance">Economy Gun & Lance Assemblies</a>
+                    <a href="#gun-extensions">Gun Extensions & Lance Insulation</a>
+                    <a href="#gun-inlet-swivels">Gun Inlet Swivels</a>
+                    <a href="#guns">Guns</a>
+                    <a href="#gun-lance-connectors">Gun & Lance Connectors</a>
+                    <a href="#haccp-guns">HACCP Compliant Gun Bodies (Foodsafe)</a>
+                    <a href="#lances">Lances</a>
+                    <a href="#telescopic-lances">Lances (Telescopic)</a>
+                    <a href="#lance-holders">Lance Holders</a>
+                    <a href="#lance-clips">Lance Clips</a>
+                    <a href="#lance-handles">Lance Handles & Accessories</a>
+                    <a href="#nozzle-holders">Nozzle Holders & Protectors</a>
+                    <a href="#quick-release-couplings">Quick Release Couplings & Probes</a>
+                    <a href="#sandblast-kits">Sandblast Kits</a>
+                </div>
+            </li>
+            <li>
+                <a href="#hoses">Hoses</a>
+                <div class="dropdown">
+                    <a href="#best-selling-hoses">Best Selling Hoses</a>
+                    <a href="#carwash-comfort-hose">Carwash Comfort Hose</a>
+                    <a href="#easyfarm365-hose">Easyfarm365+ Hose</a>
+                    <a href="#food-factory-hoses">Food Factory Hoses</a>
+                    <a href="#high-pressure-hoses">High Pressure Hoses</a>
+                    <a href="#k-lock-hoses">K-Lock TR22 Hoses (Karcher Compatible)</a>
+                    <a href="#loose-hose-fittings">Loose Hose & Fittings</a>
+                    <a href="#sewer-hoses">Sewer Hoses</a>
+                </div>
+            </li>
+            <li>
+                <a href="#foam-chemical">Foam & Chemical Equipment</a>
+                <div class="dropdown">
+                    <a href="#air-injector-nozzles">Air Injector Nozzles for ST75, ST76 & ST175</a>
+                    <a href="#ball-valves">Ball Valves</a>
+                    <a href="#chemical-foam-injectors">Chemical & Foam Injectors</a>
+                    <a href="#chemical-valves-restrictors">Chemical Valves & Restrictors</a>
+                    <a href="#foamers-sprayers">Foamers & Sprayers</a>
+                    <a href="#flow-restrictors">Flow Restrictors</a>
+                    <a href="#foam-heads-lances">Foam Heads & Lances</a>
+                    <a href="#foam-nozzles">Foam Nozzles</a>
+                    <a href="#foam-guns">Foam Guns</a>
+                    <a href="#foam-spares-accessories">Foam Spares & Accessories</a>
+                    <a href="#food-industry-equipment">Food Industry Equipment</a>
+                    <a href="#intake-suction-filters">Intake and Suction Filters</a>
+                    <a href="#marolex-sprayers">Marolex Sprayers</a>
+                    <a href="#rinse-lances">Rinse Lances</a>
+                    <a href="#solenoid-valves">Solenoid Valves</a>
+                    <a href="#snow-foam-lances">Snow Foam Lances</a>
+                    <a href="#turbofoam-lance">Turbofoam Lance 365+</a>
+                </div>
+            </li>
+            <li>
+                <a href="#burner-equipment">Burner Equipment</a>
+                <div class="dropdown">
+                    <a href="#burner-motors">Burner Motors & Flanges</a>
+                    <a href="#burner-flame-control">Burner Flame Control</a>
+                    <a href="#boiler-spares">Boiler Spares & Accessories</a>
+                    <a href="#connectors-cables">Connectors & Cables</a>
+                    <a href="#mazzoni-boiler">Mazzoni Boiler Units</a>
+                    <a href="#electrodes">Electrodes</a>
+                    <a href="#fuel-nozzles">Fuel Nozzles</a>
+                    <a href="#fuel-pumps">Fuel Pumps & Drive Pegs</a>
+                    <a href="#fuel-filters">Fuel Filters</a>
+                    <a href="#fuel-hose">Fuel Hose</a>
+                    <a href="#heating-coils">Heating Coils</a>
+                    <a href="#misc-burner">Miscellaneous Burner Accessories</a>
+                    <a href="#mazzoni-firebox">Mazzoni Firebox</a>
+                    <a href="#solenoid-valves">Solenoid Valves</a>
+                    <a href="#transformers">Transformers & Accessories</a>
+                    <a href="#thermostats">Thermostats & Accessories</a>
+                </div>
+            </li>
+            <li>
+                <a href="#site-vehicle-wash">Site & Vehicle Wash</a>
+                <div class="dropdown">
+                    <a href="#agricultural-cleaning">Agricultural Cleaning</a>
+                    <a href="#ball-valves">Ball Valves</a>
+                    <a href="#brushes-squeegees">Brushes, Squeegees & Poles</a>
+                    <a href="#car-wash-equipment">Car Wash Equipment</a>
+                    <a href="#car-wash-booms">Car Wash & Vacuum Booms</a>
+                    <a href="#coin-meters">Coin Meters & Accessories</a>
+                    <a href="#compression-pipes">Compression Pipes & Fittings</a>
+                    <a href="#flow-restrictors">Flow Restrictors</a>
+                    <a href="#high-pressure-swivels">High Pressure Swivels</a>
+                    <a href="#hose-reels">Hose Reels & Accessories</a>
+                    <a href="#lance-holders">Lance, Hose & Brush Holders</a>
+                    <a href="#marolex-sprayers">Marolex Sprayers</a>
+                    <a href="#pressure-washer">Pressure Washer Frames & Accessories</a>
+                    <a href="#rail-systems">Rail Systems & Accessories</a>
+                    <a href="#sewer-hoses">Sewer Hoses, Reels & Accessories</a>
+                    <a href="#snow-foam">Snow Foam Lances</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Welcome to HP Organiser</h2>
+        <p>Browse our wide selection of high-quality products for all your industrial and cleaning needs.</p>
+    </div>
+</body>
+</html>
