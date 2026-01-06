@@ -1,0 +1,321 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lamda Pressure Washer | Interpump Marketplace</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">LP</div>
+        <span>Lamda Pressure Washer</span>
+      </div>
+      <nav class="main-nav">
+        <a href="#products">Catalog</a>
+        <a href="#applications">Applications</a>
+        <a href="#downloads">Downloads</a>
+        <a href="#company">Company</a>
+        <a href="#news">News</a>
+        <a href="#cta">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="link" href="#cta">Contact</a>
+        <a class="btn small" href="#partners">List inventory</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow">Interpump marketplace</p>
+          <h1>Interpump pumps, kits, and accessories ready to drop into your builds.</h1>
+          <p class="lede">Browse by product code, family, or application. Swap images and spec sheets with your own assets when you upload the official Interpump documentation.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#products">Browse catalog</a>
+            <a class="btn ghost" href="#partners">Upload inventory</a>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric">
+              <span>Product code first</span>
+              <p>Every card reserves space for code, docs, and image.</p>
+            </div>
+            <div class="metric">
+              <span>Docs ready</span>
+              <p>Drop PDFs into docs/ and images into images/.</p>
+            </div>
+            <div class="metric">
+              <span>Filters + search</span>
+              <p>By family, code, pressure, or flow.</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="card-stack">
+            <div class="stack-card primary">
+              <p class="eyebrow">Data model</p>
+              <h3>Code, family, docs, image</h3>
+              <p>Each listing supports product code, series, specs, doc URL, and image.</p>
+            </div>
+            <div class="stack-card secondary">
+              <p class="eyebrow">Uploads</p>
+              <h3>images/ and docs/</h3>
+              <p>Add your Interpump photos and PDFs; the cards will pick them up.</p>
+            </div>
+            <div class="stack-card accent">
+              <p class="eyebrow">Support</p>
+              <h3>Lamda concierge</h3>
+              <p>We can import the full catalog once you provide the feed.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="products">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Interpump catalog shell</p>
+            <h2>Swap in the official product data and imagery.</h2>
+          </div>
+          <div class="controls">
+            <div class="filters" role="group" aria-label="Filter by category">
+              <button class="chip active" data-filter="all">All</button>
+              <button class="chip" data-filter="pumps">Pumps</button>
+              <button class="chip" data-filter="kits">Kits</button>
+              <button class="chip" data-filter="accessories">Accessories</button>
+              <button class="chip" data-filter="spares">Spares</button>
+            </div>
+            <div class="search">
+              <input id="searchField" type="search" placeholder="Search by product code, family, pressure, or flow..." />
+            </div>
+          </div>
+        </div>
+        <div class="note">Upload product photos to <code>images/</code> and spec sheets to <code>docs/</code> using the product code in the filename (e.g., <code>images/ws202.jpg</code>, <code>docs/ws202.pdf</code>).</div>
+        <div id="productGrid" class="product-grid" aria-live="polite"></div>
+        <div id="emptyState" class="empty-state" hidden>
+          <p>No items match that filter yet. Try switching categories or clearing search.</p>
+          <button class="btn ghost" id="resetFilters">Reset filters</button>
+        </div>
+      </section>
+
+      <section class="section" id="industrial-pumps">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Industrial Pumps</p>
+            <h2>Placeholder for the Interpump industrial pumps page.</h2>
+          </div>
+        </div>
+        <div class="note">Paste the official copy from https://www.interpump.it/en/industrial-pumps/ here. Replace the placeholder blurbs below with the real text and link out to the proper PDFs once uploaded into <code>docs/</code>.</div>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>Triplex plunger pumps</h3>
+            <p class="desc">Placeholder for the main industrial pump family description. Add key pressures, flows, and typical applications.</p>
+          </div>
+          <div class="feature-card">
+            <h3>High-pressure pump lines</h3>
+            <p class="desc">Placeholder for sub-families or model ranges. Add bullets for materials, sealing, and duty cycles.</p>
+          </div>
+          <div class="feature-card">
+            <h3>OEM and custom builds</h3>
+            <p class="desc">Placeholder for integration and customization notes. Add OEM program details and contact paths.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Service and spares</h3>
+            <p class="desc">Placeholder for maintenance kits, seal kits, and service intervals. Link to support resources once available.</p>
+          </div>
+        </div>
+        <div class="feature-grid" style="margin-top:14px;">
+          <div class="feature-card">
+            <h3>Downloads</h3>
+            <p class="desc">Link to industrial pump catalogs, data sheets, and manuals once added to <code>docs/</code>.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Applications</h3>
+            <p class="desc">Summarize target industries (factory cleaning, process, transport, agriculture). Replace with official text.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Contact</h3>
+            <p class="desc">Point to your inquiry flow or mailto. Update this block with the official contact details from the Interpump page.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section feature-grid" id="applications">
+        <div class="feature-card">
+          <p class="eyebrow">Applications</p>
+          <h3>Industrial cleaning</h3>
+          <p>Placeholder for Interpump industrial and OEM cleaning use cases. Add surface prep, tank wash, and factory line stories.</p>
+        </div>
+        <div class="feature-card">
+          <p class="eyebrow">Agriculture</p>
+          <h3>Equipment and barn wash</h3>
+          <p>Placeholder for agricultural uses, sprayers, and pump integrations. Swap copy and add links to product families.</p>
+        </div>
+        <div class="feature-card">
+          <p class="eyebrow">Transport</p>
+          <h3>Fleet and rail</h3>
+          <p>Placeholder for bus, truck, rail, and marine cleaning. Add Interpump examples and recommended pumps/kits.</p>
+        </div>
+        <div class="feature-card">
+          <p class="eyebrow">Specialty</p>
+          <h3>Custom builds</h3>
+          <p>Placeholder for niche integrations. Add references to hydraulics, accessories, and spare programs.</p>
+        </div>
+      </section>
+
+      <section class="section feature-grid" id="services">
+        <div class="feature-card">
+          <p class="eyebrow">Catalog services</p>
+          <h3>We ingest your feed</h3>
+          <p>Send a CSV/JSON with Interpump codes, families, pressures, flows, and we populate the grid.</p>
+        </div>
+        <div class="feature-card">
+          <p class="eyebrow">Asset handling</p>
+          <h3>Docs and imagery</h3>
+          <p>Drop PDFs into docs/ and product shots into images/; filenames keyed by product code.</p>
+        </div>
+        <div class="feature-card">
+          <p class="eyebrow">Quality control</p>
+          <h3>Spec highlights</h3>
+          <p>Cards display code, pressure, flow, rpm, drive, and notes for quick scanning.</p>
+        </div>
+      </section>
+
+      <section class="section vendor" id="partners">
+        <div class="vendor-copy">
+          <p class="eyebrow">For suppliers</p>
+          <h2>Plug in your Interpump inventory with Lamda.</h2>
+          <p class="lede">We qualify listings and ensure specs, codes, and docs stay synchronized across the marketplace.</p>
+          <ul class="checklist">
+            <li>Product cards keyed by code, family, and doc URL</li>
+            <li>Image and PDF drop zones mapped to /images and /docs</li>
+            <li>Filters by category and live search by code/spec</li>
+          </ul>
+          <a class="btn primary" href="#cta">Start onboarding</a>
+        </div>
+        <div class="vendor-panel">
+          <div class="panel">
+            <div class="panel-row">
+              <div>
+                <p class="eyebrow">Lamda Score</p>
+                <h3>92</h3>
+                <p>Based on fulfillment speed, accuracy, and compliance.</p>
+              </div>
+              <div class="badge success">Featured Vendor</div>
+            </div>
+            <div class="panel-row">
+              <p class="eyebrow">Next steps</p>
+              <ol>
+                <li>Upload images/ and docs/ with product codes</li>
+                <li>Send CSV/JSON feed with codes, specs, and pricing</li>
+                <li>Activate payouts and go live</li>
+              </ol>
+            </div>
+            <button class="btn ghost block" id="scheduleCall">Schedule a 15-minute call</button>
+            <p class="micro">We can bulk import the Interpump catalog once your feed is shared.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="downloads">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Downloads</p>
+            <h2>Placeholder area for Interpump technical docs and manuals.</h2>
+          </div>
+        </div>
+        <div class="note">Upload official PDFs into <code>docs/</code> using product codes to auto-link from cards. Add general brochures here when available.</div>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>Catalog PDFs</h3>
+            <p class="desc">Add links to general catalogs, family brochures, and pressure charts.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Manuals and maintenance</h3>
+            <p class="desc">Add user manuals, maintenance schedules, and torque specs as you upload.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Compliance and safety</h3>
+            <p class="desc">Add MSDS, CE declarations, and safety bulletins once provided.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="company">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Company</p>
+            <h2>Placeholder for Interpump company profile.</h2>
+          </div>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>About Interpump</h3>
+            <p class="desc">Add official history, leadership, and group overview content.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Innovation</h3>
+            <p class="desc">Add R&D highlights, patents, and technology notes.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Sustainability</h3>
+            <p class="desc">Add sustainability statements and ESG reports.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="news">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">News</p>
+            <h2>Placeholder for press releases and updates.</h2>
+          </div>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>Latest releases</h3>
+            <p class="desc">Insert recent announcements, product launches, or corporate news.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Events</h3>
+            <p class="desc">Add tradeshow appearances, webinars, or roadshows.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Media</h3>
+            <p class="desc">Add media kits, logos, and contact information for press inquiries.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta" id="cta">
+        <div>
+          <p class="eyebrow">Ready to start?</p>
+          <h2>Send your Interpump catalog and assets.</h2>
+          <p class="lede">Share your product export and imagery. Lamda will load the marketplace and keep it updated.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn primary" href="mailto:hello@lamdapressure.com">hello@lamdapressure.com</a>
+          <a class="btn ghost" href="#products">View placeholders</a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="brand">
+        <div class="brand-mark">LP</div>
+        <span>Lamda Pressure Washer</span>
+      </div>
+      <div class="footer-links">
+        <a href="#products">Catalog</a>
+        <a href="#services">Services</a>
+        <a href="#partners">Vendors</a>
+        <a href="#cta">Support</a>
+      </div>
+      <p class="micro">Lamda helps you merchandise Interpump pumps, kits, spares, and accessories with code-level accuracy.</p>
+    </footer>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
